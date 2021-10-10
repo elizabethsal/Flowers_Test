@@ -3,8 +3,8 @@ import java.util.Collections;
 
 public class Bouquet {
 
-    public ArrayList<Flower> flowers;
-    public ArrayList<Accessory> accessories;
+    private ArrayList<Flower> flowers;
+    private ArrayList<Accessory> accessories;
 
     public Bouquet(ArrayList<Flower> flowers, ArrayList<Accessory> accessories) {
         this.flowers = flowers;
@@ -23,7 +23,7 @@ public class Bouquet {
             cost += flower.getCost();
         }
         for (Accessory accessory : accessories) {
-            cost += accessory.cost;
+            cost += accessory.getCost();
         }
         return cost;
     }
@@ -40,7 +40,7 @@ public class Bouquet {
         ArrayList<Flower> rv = new ArrayList<>();
 
         for (Flower flower : flowers) {
-            if (flower.stemLength >= minLength && flower.stemLength <= maxLength) {
+            if (flower.getStemLength() >= minLength && flower.getStemLength() <= maxLength) {
                 rv.add(flower);
             }
         }

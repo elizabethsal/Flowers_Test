@@ -1,8 +1,8 @@
 public class Flower implements Comparable {
 
-    public String name;
-    public int stemLength;
-    public int freshness;
+    private String name;
+    private int stemLength;
+    private int freshness;
 
 
     public Flower(String name, int stemLength, int freshness) {
@@ -13,6 +13,18 @@ public class Flower implements Comparable {
 
     public int getCost() {
         return stemLength + freshness;
+    }
+
+    public int getStemLength() {
+        return stemLength;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getFreshness() {
+        return freshness;
     }
 
     public int getHierarchy() {
